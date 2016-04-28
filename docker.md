@@ -6,6 +6,5 @@ docker images #Display all the images
 
 
 ```bash
-docker ps -a
+docker ps -a #Display all the containers
 ```
-Display all the containers
