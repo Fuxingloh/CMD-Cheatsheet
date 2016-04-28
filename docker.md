@@ -1,9 +1,9 @@
 ## Docker
 
 ```bash
-docker images
+docker images #Display all the images
 ```
-Display all the images
+
 
 ```bash
 docker ps -a
