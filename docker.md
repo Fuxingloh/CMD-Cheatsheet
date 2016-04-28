@@ -35,18 +35,33 @@ docker exec id/ContainerName cd /usr/path # latter is commands
 docker stop id/ContainerName # stop a running container
 docker rm id/ContainerName # remove a stoped container
 
-```bash
-docker stop $(docker ps -a -q) # stop all running
+docker stop $(docker ps -a -q) # stop all running container
+docker rm $(docker ps -a -q) # remove all running container
 ```
 
 ```bash
+docker pull user-name/docker-name # pull container from docker hub
 ```
 
 ```bash
+docker stats # get docker cpu/memory stats
 ```
 
+#### Simple Rebuild Script
 ```bash
-```
+# Use it like this ./rebuild.sh name 80:80
+#chmod +x rebuild.sh
+#./rebuild.sh
 
-```bash
+NAME=$1
+PORT=$2
+
+# Clean and Remove all
+docker stop $NAME
+docker rm $NAME
+docker rmi $NAME
+
+# Build and Run
+docker build -t $NAME .
+docker run -d -p $2 --name $NAME $NAME
 ```
