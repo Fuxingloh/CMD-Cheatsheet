@@ -1,5 +1,5 @@
 ## Docker
 
-```ssh
+```bash
 docker images
 ```
