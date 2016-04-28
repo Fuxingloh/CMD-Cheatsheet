@@ -1,10 +1,13 @@
 ## Docker
 
 ```bash
-docker images #Display all the images
+docker images # display all the images
 ```
 
 
 ```bash
-docker ps -a #Display all the containers
+docker ps -a # display all the containers
+
+docker build -t name path # build image
+docker build -t cool-engine .
 ```
