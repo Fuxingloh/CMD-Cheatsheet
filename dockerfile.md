@@ -14,8 +14,9 @@ COPY src/ /usr/html/  # copy a directory and move to container
 COPY nginx.conf /etc/nginx/nginx.conf # copy a file and move to container
 
 EXPOSE 8000 # expose port 8000 to outside
-ENV API_KEY some thing # set the environment variable
 
+ENV API_KEY some thing # set the environment variable
+ENV PROD_DOMAIN="http://www.com" NODE_ENV="production"
 
 CMD ["node", "bin/www"] # basically running a cmd, in this case, running a program with parameters
 ```
