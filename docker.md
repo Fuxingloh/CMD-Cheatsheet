@@ -40,6 +40,10 @@ docker rm $(docker ps -a -q) # remove all running container
 ```
 
 ```bash
+docker login # log into docker hub
+```
+
+```bash
 docker pull user-name/docker-name # pull container from docker hub
 docker pull user-name/docker-name:tag # with tag
 ```
