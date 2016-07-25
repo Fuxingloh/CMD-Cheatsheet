@@ -17,3 +17,9 @@ free -m # check free memory on linux system
 ```bash
 df # check free disk space
 ```
+
+#### Scripts
+```bash
+sudo chmod +x .
+sudo chmod 755 filename
+```
