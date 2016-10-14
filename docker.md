@@ -16,6 +16,7 @@ docker build -t cool-engine . # your image name is called cool-engine your path 
 
 ```bash
 docker rmi tag/name # remove image with either tag or name
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}") # remove untagged images
 ```
 
 ```bash
