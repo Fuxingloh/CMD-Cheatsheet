@@ -53,6 +53,10 @@ docker pull user-name/docker-name:tag # with tag
 docker stats # get docker cpu/memory stats
 ```
 
+```bash
+docker logs containerId # to get logs for that container
+```
+
 #### Simple Rebuild Script
 ```bash
 # Use it like this ./rebuild.sh name 80:80
