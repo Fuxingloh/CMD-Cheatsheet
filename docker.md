@@ -12,7 +12,7 @@ docker ps -a # display all the containers
 ```bash
 docker build -t name path # build image
 docker build -t cool-engine . # your image name is called cool-engine your path is current directory
-docker build -t engine . --build-arg NAME= # passing build args to build
+docker build -t engine --build-arg NAME=something . # passing build args to build
 ```
 
 ```bash
