@@ -4,6 +4,8 @@
 FROM user/project:tag # From what base image (this is a must)
 MAINTAINER Your Name <example@website.com> # Information about the mainter 
 
+ARG NAME=something
+
 VOLUME ["/data"] # set volume
 WORKDIR /src # set current working directory to /src
 
