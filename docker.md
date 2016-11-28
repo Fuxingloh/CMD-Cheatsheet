@@ -43,6 +43,7 @@ docker rm $(docker ps -a -q) # remove all running container
 
 ```bash
 docker login # log into docker hub
+sudo yum install -y docker # install on AWS
 ```
 
 ```bash
