@@ -26,3 +26,8 @@ chown -R <user> <directory> # give directory to user
 ll <directory> # see permission
 rsync -r -av --progress <source> <dest>
 ```
+
+#### Repos
+```bash
+sudo yum install java-1.8.0
+```
