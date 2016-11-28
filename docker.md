@@ -26,6 +26,7 @@ docker run -d -p 80:8080 ImageName # run container with port 80 being external a
 docker run -d -e API_KEY='nwegn3t5' # run container with environmental variable
 docker run -d -e E1='e1' -e E2='e2' # multiple environmental variable
 docker run -d -p 80:80 -e FOO='bar' --name ContainerName ImageName # everything
+docker run -v /host/directory:/container/directory # mount volume
 ```
 
 ```bash
