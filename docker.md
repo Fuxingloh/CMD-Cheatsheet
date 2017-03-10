@@ -17,7 +17,7 @@ docker build -t engine --build-arg NAME=something . # passing build args to buil
 
 ```bash
 docker rmi tag/name # remove image with either tag or name
-docker rmi $(docker images | grep "^<none>" | awk "{print $3}") # remove untagged images
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc) # remove untagged images
 ```
 
 ```bash
