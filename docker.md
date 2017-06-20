@@ -13,6 +13,8 @@ docker ps -a # display all the containers
 docker build -t name path # build image
 docker build -t cool-engine . # your image name is called cool-engine your path is current directory
 docker build -t engine --build-arg NAME=something . # passing build args to build
+# Delete AWS Ecr Untagged
+aws ecr describe-repositories --output text | awk '{print $5}' | while read line; do  aws ecr list-images --repository-name $line --filter tagStatus=UNTAGGED --query 'imageIds[*]' --output text | while read imageId; do aws ecr batch-delete-image --repository-name $line --image-ids imageDigest=$imageId; done; done
 ```
 
 ```bash
