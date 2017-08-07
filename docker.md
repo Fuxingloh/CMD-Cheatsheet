@@ -7,6 +7,8 @@ docker ps --filter "status=exited" | awk '{print $1}' | xargs --no-run-if-empty 
 aws ecr describe-repositories --output text | awk '{print $5}' | while read line; do  aws ecr list-images --repository-name $line --filter tagStatus=UNTAGGED --query 'imageIds[*]' --output text | while read imageId; do aws ecr batch-delete-image --repository-name $line --image-ids imageDigest=$imageId; done; done
 # AWS ECR login
 `aws ecr get-login --no-include-email`
+docker system df
+docker volume rm `docker volume ls -q -f dangling=true`
 ```
 
 ```bash
