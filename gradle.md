@@ -12,4 +12,7 @@ artifactory_contextUrl=http://artifactory.com/artifactory
 ```bash
 # Run a task for a single project/module
 gradlew clean dockerBuildImage -p module
+
+# Gradlew need permission to run
+chmod +x gradlew
 ```
